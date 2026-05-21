@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy_strlcat.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: zleullie <zleullie@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 17:55:32 by zleullie          #+#    #+#             */
-/*   Updated: 2026/05/16 19:53:20 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/05/20 22:07:59 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,27 +36,27 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t		src_length;
 	size_t		dst_length;
-	char		*d;
-	size_t		n;
+	char		*output;
+	size_t		capacity;
 
 	src_length = ft_strlen(src);
-	n = size;
-	d = dst;
-	while (n-- != 0 && *d != '\0')
-		d++;
-	dst_length = d - dst;
-	n = size - dst_length;
-	if (n == 0)
+	capacity = size;
+	output = dst;
+	while (capacity-- != 0 && *output != '\0')
+		output++;
+	dst_length = output - dst;
+	capacity = size - dst_length;
+	if (capacity == 0)
 		return (dst_length + src_length);
 	while (*src)
 	{
-		if (n != 1)
+		if (capacity != 1)
 		{
-			*d++ = *src;
-			n--;
+			*output++ = *src;
+			capacity--;
 		}
 		src++;
 	}
-	*d = 0;
+	*output = 0;
 	return (dst_length + src_length);
 }
