@@ -8,12 +8,12 @@ Libft is a set of general purpose functions that help with memory handling, stri
 
 ## Instructions
 
-To compile this library, run
+To compile this library, run:
 ```sh
 $ make
 ```
 
-To compile cleanly (removing leftover binaries)
+To compile cleanly (removing leftover binaries):
 ```sh
 $ make re
 ```
