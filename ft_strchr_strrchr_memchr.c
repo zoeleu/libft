@@ -6,7 +6,7 @@
 /*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 19:12:14 by zleullie          #+#    #+#             */
-/*   Updated: 2026/05/27 11:55:18 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/05/27 12:00:16 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *) s + ft_strlen(s));
 	while (*s)
 	{
-		if (*s == (char)c)
+		if (*s == (unsigned char)c)
 			return ((char *)s);
 		s++;
 	}
@@ -35,7 +35,7 @@ char	*ft_strrchr(const char *s, int c)
 	last_occurrence = 0;
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (unsigned char) c)
 			last_occurrence = (char *)s;
 		s++;
 	}
