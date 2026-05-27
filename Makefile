@@ -1,7 +1,7 @@
 NAME	= libft.a
 
 CC		= cc
-CFLAGS	= -Wall -Wextra -fPIC -c
+CFLAGS	= -Wall -Wextra -Werror -c
 
 INCDIR	= .
 
