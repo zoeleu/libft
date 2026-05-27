@@ -6,7 +6,7 @@
 /*   By: zleullie <zleullie@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/15 21:58:08 by zleullie          #+#    #+#             */
-/*   Updated: 2026/05/17 01:52:54 by zleullie         ###   ########.fr       */
+/*   Updated: 2026/05/27 11:04:13 by zleullie         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstdelone(new_lst, del);
 			new_lst = NULL;
 		}
-	}
+	}	
 	return (new_lst);
 }
